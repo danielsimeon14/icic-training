@@ -32,7 +32,7 @@ Name: ${form.name}
 Phone: ${form.phone}
 Email: ${form.email}. I would like to make payment and send proof.`;
 
-    const whatsappUrl = `https://wa.me/2349035987953?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/2348038995389?text=${encodeURIComponent(message)}`;
 
     window.location.href = whatsappUrl;
   };
@@ -102,7 +102,7 @@ Email: ${form.email}. I would like to make payment and send proof.`;
           ].map((item, index) => (
             <div
               key={index}
-              className="shadow-lg hover:scale-[1.02] grid gap-5 py-5 text-center rounded-2xl hover:border-r-blue-900 justify-center items-center px-auto relative"
+              className="shadow-lg hover:scale-[1.02] grid gap-10 py-5 text-center rounded-2xl hover:border-r-blue-900 hover:border-r-2 justify-center items-center px-auto relative"
             >
               <div className=" text-3xl lg:text-4xl text-center">
                 {item.name}
@@ -157,7 +157,7 @@ Email: ${form.email}. I would like to make payment and send proof.`;
               onChange={(e) => setForm({ ...form, email: e.target.value })}
             />
 
-            <button className="w-full bg-blue-900  text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+            <button className="w-full bg-blue-900 px-auto text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
               Register & Continue
             </button>
           </form>
