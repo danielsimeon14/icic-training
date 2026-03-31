@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { Eye, EyeClosed, EyeOff } from "lucide-react";
+import {
+  Calendar,
+  Clock11,
+  Eye,
+  EyeClosed,
+  EyeOff,
+  Locate,
+  LocateIcon,
+  MapPin,
+  Phone,
+} from "lucide-react";
 import "./app.css";
 
 export default function App() {
@@ -32,9 +42,11 @@ Email: ${form.email}. I would like to make payment and send proof.`;
       {/* HERO */}
       <section className="bg-blue-900 text-white py-20 px-6 text-center rounded-b-lg">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Workers Training Conference 2026
+          INTERNATIONAL CHURCH LEADERS TRAINING 2026
         </h1>
         <p className="max-w-xl mx-auto text-lg text-blue-100 mb-6">
+          A transformative leadership conference for church leaders and workers{" "}
+          <br />
           Be equipped for ministry, connect with fellow ministers, and grow
           under seasoned men of God.
         </p>
@@ -68,14 +80,48 @@ Email: ${form.email}. I would like to make payment and send proof.`;
           ))}
         </div>
       </section>
-
+      {/* location */}
+      <section className=" bg-transparent mx-auto max-w-3xl  mb-12 py-16 px-10 ">
+        <h1 className="mx-auto text-4xl lg:text-5xl text-center py-5 text-blue-900">
+          Location
+        </h1>
+        <div className="grid gap-5 md:grid-cols-2">
+          {[
+            {
+              name: "Venue",
+              description: "ECWA Guest House Aba (opp. abia state polytechnic",
+              icon: <MapPin />,
+            },
+            { name: "Time", description: "9am prompt", icon: <Clock11 /> },
+            { name: "Date", description: "16th May, 2026", icon: <Calendar /> },
+            {
+              name: "Contact",
+              description: "+234 8038 995 389,  +234 8130 786 057",
+              icon: <Phone />,
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="shadow-lg hover:scale-[1.02] grid gap-5 py-5 text-center rounded-2xl hover:border-r-blue-900 justify-center items-center px-auto relative"
+            >
+              <div className=" text-3xl lg:text-4xl text-center">
+                {item.name}
+              </div>
+              <div className=" text-mb text-gray-700 ">{item.description}</div>
+              <div className="absolute left-2 top-1 rounded-2xl px-2 py-1 bg-blue-900/70">
+                {item.icon}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
       {/* PAYMENT */}
       <section className="bg-white py-12 px-6 max-w-xl mx-auto rounded-2xl shadow-md mb-12">
         <h3 className="text-xl font-bold mb-4">Payment Details</h3>
-        <p>Bank: Access Bank</p>
+        <p>Bank: UBA</p>
         <p>Amount: N10, 000</p>
-        <p>Account Number: 1234567890</p>
-        <p>Account Name: Church Ministry</p>
+        <p>Account Number: 1028837647</p>
+        <p>Account Name: Christ centered school of theology</p>
 
         <p className="mt-4 text-sm text-gray-700">
           After payment, you will be redirected to WhatsApp to send proof.
